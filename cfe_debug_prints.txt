@@ -1,0 +1,50 @@
+NDCK - apply the NAND phase bump patch
+NONE - jffs2 magic not found in partition
+NAN6 - NVRAM_DATA fields for this rootfs are not valid
+NAN7 - File system info cannot be found for either rootfs. NVRAM_DATA may not be set. Use default values.
+PAR0 (PARx) - searching partition (x)
+U000 (Uxxx) - successfully retrieved UBIFS sequence number (xxx)
+COM0 - copy of UBIFS metadata is uncommitted
+COM1 - copy of UBIFS metadata is committed
+UBI# - end of UBI processing
+BTxx (BT00 -> 0000) - position of bootblock (stored in nvram)
+NAN9 - bootblock position is not stored in NVRAM
+JFFS - NAND_FULL_PARTITION_SEARCH is done
+J000 (J###) - search for cferam.###
+OVRD - software debug is on, boot priority override
+TRYx (TRY0) - searching partition for CFERAM
+NAN3 - beginning of partition search
+JFS2 - NVRAM says boot partition is JFFS2
+RFSx (RFS0 -> JFFS) - If secure boot, compressed, encrypted CFE RAM is authenticated within internal memory
+ERR1 - nand_read_buf() <= 0 (end of flash or read error)
+UBI! - process UBI load (also if jffs2 not found)
+BTL? -> BTLA -> PASS - Authenticate the CFE RAM bootloader (boot_secure)
+NAN5 - Save the rootfs partition that the CFE RAM image boots from at the memory location before the CFE RAM load address. The CFE RAM image uses this value to determine the partition to flash a new rootfs to.
+DIE0 - cferam is not found
+LINX - directly start linux from ROM
+CMPF - decompression Failed
+PLLI - pll_init() starting
+PMCB - WaitPmc(kPMCRunStateAVSCompleteWaitingForImage) finished
+ERRA - The expected message is larger than we can sign using SHA-256
+ERRB - The signature block provided is the wrong size
+ERRC - The SHA-256 digest we were passed was the wrong size
+ERRD - The public key modulus provided is the wrong size
+ERRE - The encoded message is too small to hold the required information
+ERRF - The seed length is not the length of a SHA-256 digest
+ERRG - An MP division operation has failed
+ERRH - We cannot generate a mask of the requested length
+ERRI - The message representative is too short to hold the required information 
+ERRJ - The message representative did not end with the required byte 0xbc
+ERRK - The recovered message MB' is not null (but should have been)
+ERRL - The computed hash does not match the recovered hash
+ERRM - UNKNOWN SHA-256 error
+MMU0 - armv8_mmuinit()
+MER0 - armv8_mmuinit()
+DRE0 - DRAM test error
+PASS - DRAM test pass
+DRAM - DDR init
+SIZx (SIZ0) - memory size detect (x+1 for each 2gb)
+SIZX -> FAIL - memory size cannot be detected
+CKLP - GPIO check loop
+PMCE - PMC error
+PMCD - PMC done
