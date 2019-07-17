@@ -2,6 +2,7 @@ NDCK - apply the NAND phase bump patch
 NONE - jffs2 magic not found in partition
 NAN6 - NVRAM_DATA fields for this rootfs are not valid
 NAN7 - File system info cannot be found for either rootfs. NVRAM_DATA may not be set. Use default values.
+NAN8 - cfe_launch(pucEntry) failed or (pucEntry && isize <= 0) == FALSE
 PAR0 (PARx) - searching partition (x)
 U000 (Uxxx) - successfully retrieved UBIFS sequence number (xxx)
 COM0 - copy of UBIFS metadata is uncommitted
@@ -20,7 +21,7 @@ ERR1 - nand_read_buf() <= 0 (end of flash or read error)
 UBI! - process UBI load (also if jffs2 not found)
 BTL? -> BTLA -> PASS - Authenticate the CFE RAM bootloader (boot_secure)
 NAN5 - Save the rootfs partition that the CFE RAM image boots from at the memory location before the CFE RAM load address. The CFE RAM image uses this value to determine the partition to flash a new rootfs to.
-DIE0 - cferam is not found
+DIE0 - cferam is not found, cleanup internal memory, and set the external interface enable bit high enabling JTAG access
 LINX - directly start linux from ROM
 CMPF - decompression Failed
 PLLI - pll_init() starting
