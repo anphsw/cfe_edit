@@ -406,7 +406,7 @@ int edit_cfe_nvram(void *src_mem, int argc, char ** argv, char *options_exist) {
         switch (c) {
                 case 'L':  // bootline
 			memset(bcm_nvram.bootline, 0, sizeof(bcm_nvram.bootline));
-			if (!sscanf(optarg, "%255s", (char *)&bcm_nvram.bootline)) retcode++;
+			strncpy((char *)&bcm_nvram.bootline, optarg, 255);
                         break;
                 case 'B':  // board id
 			memset(bcm_nvram.board_id, 0, sizeof(bcm_nvram.board_id));
